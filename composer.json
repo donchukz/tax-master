@@ -1,0 +1,25 @@
+{
+    "name": "pontian/tax-master",
+    "description": "Tax Utility for web",
+    "type": "library",
+    "authors": [
+        {
+            "name": "OKAFOR PONTIAN",
+            "email": "chuksdeveloper@gmail.com"
+        }
+    ],
+    "minimum-stability": "beta",
+    "autoload": {
+        "psr-4": {
+            "Pontian\\TaxMaster\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Pontian\\TaxMaster\\Providers\\ExampleServiceProvider"
+            ]
+        }
+    },
+    "require": {}
+}
