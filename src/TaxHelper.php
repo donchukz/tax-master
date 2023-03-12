@@ -32,7 +32,7 @@ trait TaxHelper
         {
             $vat_tax = Tax::where('name', 'VAT')->first();
             $new_tax_amount = (($amount + $sum_of_current_selected_taxes) * $vat_tax->percentage) / 100;
-            $tax_collection->push([$vat_tax => $new_tax_amount]);
+            $tax_collection->push([$vat_tax->name => $new_tax_amount]);
         }
         return $tax_collection;
     }
