@@ -15,16 +15,18 @@ trait TaxHelper
         {
             $tax = Tax::find($selected_tax_id);
 
-            if($tax->name !== 'VAT')
-            {
-                $new_tax_amount = ($amount * $tax->percentage) / 100;
+            if (!is_null($tax)){
+                if($tax->name !== 'VAT')
+                {
+                    $new_tax_amount = ($amount * $tax->percentage) / 100;
 
-                $sum_of_current_selected_taxes += $new_tax_amount;
+                    $sum_of_current_selected_taxes += $new_tax_amount;
 
-                $tax_collection->push([$tax->name => $new_tax_amount]);
-            }
-            else{
-                $is_vat_present = true;
+                    $tax_collection->push([$tax->name => $new_tax_amount]);
+                }
+                else{
+                    $is_vat_present = true;
+                }
             }
         }
 
