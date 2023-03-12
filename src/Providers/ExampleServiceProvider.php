@@ -1,6 +1,6 @@
 <?php
 
-namespace Pontian\TaxMaster;
+namespace Pontian\TaxMaster\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
