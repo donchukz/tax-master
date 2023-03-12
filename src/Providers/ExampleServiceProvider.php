@@ -15,7 +15,7 @@ class ExampleServiceProvider extends ServiceProvider
     {
         // Migrations example.
         $this->publishes([
-            __DIR__.'/../database/migrations' => database_path('migrations')
+            __DIR__.'/../../database/migrations' => database_path('migrations')
         ], 'migrations');
 
 //        // Configuration example.
