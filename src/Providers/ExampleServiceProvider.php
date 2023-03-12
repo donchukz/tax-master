@@ -14,9 +14,9 @@ class ExampleServiceProvider extends ServiceProvider
     public function boot()
     {
         // Migrations example.
-//        $this->publishes([
-//            __DIR__.'/database/migrations' => database_path('migrations')
-//        ], 'migrations');
+        $this->publishes([
+            __DIR__.'/src/database/migrations' => database_path('migrations')
+        ], 'migrations');
 
 //        // Configuration example.
 //        // `config` is the tag.
