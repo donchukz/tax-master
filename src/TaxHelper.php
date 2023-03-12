@@ -4,7 +4,7 @@ namespace Pontian\TaxMaster;
 
 use Pontian\TaxMaster\Models\Tax;
 
-class TaxHelper
+trait TaxHelper
 {
     public function calculate($taxes, $amount): \Illuminate\Support\Collection
     {
