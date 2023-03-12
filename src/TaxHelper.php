@@ -2,7 +2,7 @@
 
 namespace Pontian\TaxMaster;
 
-use Pontian\TaxMaster\Models\Tax;
+use \Pontian\TaxMaster\Models\Tax;
 
 trait TaxHelper
 {
