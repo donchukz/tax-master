@@ -13,10 +13,9 @@ class ExampleServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        dd(__DIR__);
         // Migrations example.
         $this->publishes([
-            __DIR__.'/example/migrations' => database_path('migrations')
+            __DIR__.'/database/migrations' => database_path('migrations')
         ], 'migrations');
 
 //        // Configuration example.
