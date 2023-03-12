@@ -15,18 +15,13 @@ class TaxMasterServiceProvider extends ServiceProvider
     {
         //publish tax migrations
         $this->publishes([
-            __DIR__.'/../../database/migrations' => database_path('migrations')
+            __DIR__.'/../database/migrations' => database_path('migrations')
         ], 'migrations');
 
         //publish tax seeders
         $this->publishes([
-            __DIR__.'/../../database/seeders' => database_path('seeders')
+            __DIR__.'/../database/seeders' => database_path('seeders')
         ], 'seeders');
-
-        //publish tax model
-        $this->publishes([
-            __DIR__.'/../Models' => app_path('Models')
-        ], 'model');
     }
 
     /**
