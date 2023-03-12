@@ -4,7 +4,7 @@ namespace Pontian\TaxMaster;
 
 use Illuminate\Support\ServiceProvider;
 
-class ExampleServiceProvider extends ServiceProvider
+class TaxMasterServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap the application services.
@@ -13,22 +13,20 @@ class ExampleServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        // Migrations example.
+        //publish tax migrations
         $this->publishes([
             __DIR__.'/../../database/migrations' => database_path('migrations')
         ], 'migrations');
 
-//        // Configuration example.
-//        // `config` is the tag.
-//        $this->publishes([
-//            __DIR__.'config/example.php' => config_path('example.php')
-//        ], 'config');
-//
-//        // Public assets example.
-//        // `public` is the tag.
-//        $this->publishes([
-//            __DIR__.'example/assets' => public_path('vendor/example')
-//        ], 'public');
+        //publish tax seeders
+        $this->publishes([
+            __DIR__.'/../../database/seeders' => database_path('seeders')
+        ], 'seeders');
+
+        //publish tax model
+        $this->publishes([
+            __DIR__.'/../Models' => app_path('Models')
+        ], 'model');
     }
 
     /**

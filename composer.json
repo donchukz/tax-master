@@ -17,7 +17,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Pontian\\TaxMaster\\ExampleServiceProvider"
+                "Pontian\\TaxMaster\\TaxMasterServiceProvider"
             ]
         }
     },
